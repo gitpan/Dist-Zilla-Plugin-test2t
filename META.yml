@@ -19,14 +19,18 @@ meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
 name: Dist-Zilla-Plugin-test2t
+no_index:
+  directory:
+    - corpus
 requires:
   Dist::Zilla::Role::FileMunger: 0
   Moose: 0
   namespace::autoclean: 0
 resources:
-  homepage: https://github.com/ingydotnet/dist-zilla-plugin-test2t-pm
-  repository: https://github.com/ingydotnet/dist-zilla-plugin-test2t-pm.git
-version: 0.001031
+  bugtracker: https://github.com/carloslima/dist-zilla-plugin-test2t-pm/issues
+  homepage: https://github.com/carloslima/dist-zilla-plugin-test2t-pm
+  repository: https://github.com/carloslima/dist-zilla-plugin-test2t-pm.git
+version: 0.001032
 x_Dist_Zilla:
   perl:
     version: 5.014002
@@ -38,7 +42,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::CheckPrereqsIndexed
       name: '@INGY/CheckPrereqsIndexed'
-      version: 0.009
+      version: 0.008
     -
       class: Dist::Zilla::Plugin::CheckExtraTests
       name: '@INGY/CheckExtraTests'
@@ -98,7 +102,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::ReadmeFromPod
       name: '@INGY/ReadmeFromPod'
-      version: 0.21
+      version: 0.18
     -
       class: Dist::Zilla::Plugin::PkgVersion
       name: '@INGY/PkgVersion'
@@ -133,7 +137,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::ReportVersions::Tiny
       name: '@INGY/ReportVersions::Tiny'
-      version: 1.10
+      version: 1.08
     -
       class: Dist::Zilla::Plugin::Prereqs
       config:
@@ -169,7 +173,15 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::test2t
       name: test2t
-      version: ~
+      version: 0.001031
+    -
+      class: Dist::Zilla::Plugin::MetaNoIndex
+      name: MetaNoIndex
+      version: 5.006
+    -
+      class: Dist::Zilla::Plugin::GithubMeta
+      name: GithubMeta
+      version: 0.42
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':InstallModules'

@@ -1,6 +1,6 @@
 package Dist::Zilla::Plugin::test2t;
 {
-  $Dist::Zilla::Plugin::test2t::VERSION = '0.001031';
+  $Dist::Zilla::Plugin::test2t::VERSION = '0.001032';
 }
 # VERSION
 
